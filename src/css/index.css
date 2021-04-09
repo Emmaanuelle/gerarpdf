@@ -1,0 +1,169 @@
+*{margin:0;
+    padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+h1{
+    text-align: center;
+    margin-bottom:2%;
+    padding-top:20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size:45px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+p{
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+#corpo{
+    text-align: center;
+}
+#Objetivoname{
+   
+    left: 10.81%;
+    right: 76.59%;
+    top:26.76%;
+    bottom: 70.98%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #6E7C8E;
+    
+
+
+}
+#Contatoname{
+    
+    left: 10.81%;
+    right: 77.1%;
+    top: 41.99%;
+    bottom: 55.76%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+color: #6E7C8E;
+
+}
+#Cursoname{
+   
+    left: 10.81%;
+    right: 78.94%;
+    top: 64.42%;
+    bottom: 33.32%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #6E7C8E;
+    margin-bottom:10rem;
+
+}
+#Experiencianame{
+    
+    left: 50.9%;
+    right: 32.47%;
+    top: 53.98%;
+    bottom: 43.76%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+color: #6E7C8E;
+
+}
+#name1{
+   
+    left: 50.9%;
+    right: 34.65%;
+    top: 26.76%;
+    bottom: 70.98%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #6E7C8E;
+
+}
+
+#Formacaoname{
+        
+        left: 50.9%;
+        right: 34.65%;
+        top: 26.76%;
+        bottom: 70.98%;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+
+
+        color: #6E7C8E;
+}
+.cabecalho{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 80.27%;
+    background: #6E7C8E;
+    height:180px;
+    margin-bottom:90px ;
+}
+.hr1{
+    margin-left:1rem;
+    width:70rem;
+    color:#FFFFFF;
+    border: 1px solid;
+    position: absolute;
+    left: 8.97%;
+    right: 8.97%;
+    top: 10%;
+    bottom: 89.01%;
+
+  
+}
+.container{
+    justify-content: center;
+    align-content:center;
+}
