@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Font awsome Icons
+     https://cdnjs.com/libraries/font-awesome/4.7.0
+     https://fontawesome.com/v4.7.0/icons/
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curvi14</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+</head>
+
+<body class="container-fluid" style="font-size: 20px;">
+    <% if (dados) { %>
+        <div class="p-4 container" style="background-color: #CEDFE4;">
+            <div class="container text-center mt-4">
+                <h1 class="font-weight-light display-4" style="color: #3B3F3E;">
+                    <%= dados.name %>
+                </h1>
+                <span style="color: #3B3F3E;" class="h4">
+                    <%= dados.age %>
+                </span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mt-4">
+                        <div class=" text-center" style="padding-left: 15px; padding-top:5px; padding-bottom: 5px;">
+                            <h5 class="font-weight-light" style="color:#3B3F3E;">Objetivo</h5>
+                        </div>
+                        <p class="container-fluid text-justify">
+                            <%= dados.goal %>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+
+                    <div class="mt-4">
+                        <div class=" text-center">
+                            <h5 class="font-weight-light" style="color:#3B3F3E;">Contato</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <%= dados.cellphone %> <br />
+                                    <%= dados.address %><br />
+                            </div>
+                            <div class="col-6">
+                                <%= dados.email %><br />
+                                    <% if (dados.linkedln_link) { %>
+                                        <%= dados.linkedln_link %><br />
+                                            <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr color="#CEDFE4">
+            <div class="row">
+                <div class="col-2 mt-4">
+                    <div class="container m-2" style="color:#CEDFE4">
+                        <span>
+                            <%= dados.courseEndYear %>
+                        </span><br />
+                    </div>
+                </div>
+                <div class="col-10">
+                    <h5 style="color:#3B3F3E;">Formação</h5>
+                    <span>
+                        <%= dados.scholarity %> - <%= dados.courseName %>
+                                <br />
+                                <%= dados.courseSchool %>
+                    </span><br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 mt-4">
+                    <div class="container m-2"  style="color:#CEDFE4">
+                        <span>
+                            <%= dados.companyStartEnd %>
+                        </span><br />
+                    </div>
+                </div>
+                <div class="col-10 mt-2">
+                    <h5 style="color:#3B3F3E;">Experiências</h5>
+                    <span>
+                        <%= dados.companyOccupation %> - <%= dados.companyName %>
+                                <br />
+                                <%= dados.companyDescription %>
+                    </span><br />
+                </div>
+                <% if (dados.companyNameVolunteer !='NOT_PRINT' && dados.companyNameVolunteer) { %>
+                    <span>
+                        <%= dados.companyNameVolunteer %>
+                    </span><br />
+                    <span>
+                        <%= dados.companyOccupationVolunteer %>
+                    </span><br />
+                    <span>
+                        <%= dados.companyDescriptionVolunteer %>
+                    </span><br />
+                    <span>
+                        <%= dados.companyStartEndVolunteer %>
+                    </span><br />
+                    <% } %>
+            </div>
+            <% if (dados.language !='NOT_PRINT' && dados.language) { %>
+
+                <div class="row">
+                    <div class="col-2 mt-4">
+                        <div class="container m-2">
+                            <span>
+
+                            </span><br />
+                        </div>
+                    </div>
+                    <div class="col-10 mt-2">
+                        <h5 style="color:#3B3F3E;">Idiomas</h5>
+                        <span>
+                            <%= dados.language %> - <%= dados.language_level %>
+                                    <br />
+                        </span><br />
+                    </div>
+                </div>
+                <% } %>
+
+                    <% if (dados.companyNameVolunteer !='NOT_PRINT' && dados.companyNameVolunteer) { %>
+                        <div class="row">
+                            <div class="col-2 mt-4">
+                                <div class="container m-2">
+                                    <span>
+
+                                    </span><br />
+                                </div>
+                            </div>
+                            <div class="col-10 mt-2">
+                                <h5 style="color:#3B3F3E;">Atividades Complementares</h5>
+                                <span>
+                                    <%= dados.companyNameVolunteer %>
+                                </span><br />
+                                <span>
+                                    <%= dados.companyOccupationVolunteer %>
+                                </span><br />
+                                <span>
+                                    <%= dados.companyDescriptionVolunteer %>
+                                </span><br />
+                                <span>
+                                    <%= dados.companyStartEndVolunteer %>
+                                </span><br />
+                            </div>
+                        </div>
+
+                        <% } %>
+
+                            <% if (dados.courses !='NOT_PRINT' && dados.courses) { %>
+                                <div class="row">
+                                    <div class="col-2 mt-4">
+                                        <div class="container m-2">
+                                            <span>
+
+                                            </span><br />
+                                        </div>
+                                    </div>
+                                    <div class="col-10 mt-2">
+                                        <h5 style="color:#3B3F3E;">Cursos</h5>
+                                        <span>
+                                            <%= dados.courses %>
+                                        </span><br />
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% if (dados.cientificResearch !='NOT_PRINT' && dados.cientificResearch) { %>
+                                        <div class="row">
+                                            <div class="col-2 mt-4">
+                                                <div class="container m-2">
+                                                    <span>
+
+                                                    </span><br />
+                                                </div>
+                                            </div>
+                                            <div class="col-10 mt-2">
+                                                <h5 style="color:#3B3F3E;">Pesquisa</h5>
+                                                <span>
+                                                    <%= dados.cientificResearch %>
+                                                </span><br />
+                                            </div>
+                                        </div>
+                                        <% } %>
+
+        </div>
+        <% } %>
+</body>
+
+</html>
