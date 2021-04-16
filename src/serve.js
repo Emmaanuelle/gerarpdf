@@ -4,23 +4,35 @@ const path = require('path')
 const puppeteer = require('puppeteer')
 const app = express()
 
-const passengers = [
-    {
-        name: "Joyce",
-        flightNumber: 7859,
-        time: "18h00",
-    },
-    {
-        name: "Brock",
-        flightNumber: 7859,
-        time: "18h00",
-    },
-    {
-        name: "Eve",
-        flightNumber: 7859,
-        time: "18h00",
-    },
-];
+const dados = {
+    "name": "Fulana da costa",
+    "age": 21,
+    "address": "Praça da Sé Localizada na Sé",
+    "city": "Brasília",
+    "state": "DF",
+    "cellphone": "61990753256",
+    "email": "emailteste@gmail.com",
+    "linkedln_link": "https://www.linkedin.com/",
+    "area": "Administração",
+    "area_level": "Estagiário(a)",
+    "goal": "Colocar em prática os conhecimentos em gestão que adquiri ao longo da graduação",
+    "scholarity": "Superior",
+    "courseName": "Gestão Pública",
+    "courseSchool": "Instituto Federal de Brasília - IFB",
+    "courseEndYear": "2021",
+    "courses": "Licitações e contratos - enap",
+    "language": "Francês",
+    "language_level": "Avançado",
+    "cientificResearch": "NOT_PRINT",
+    "companyName": "Agência nacional do petróleo, gás natural e biocombustíveis - anp",
+    "companyOccupation": "Estagiária",
+    "companyDescription": "Auxilio em professos de licitação",
+    "companyStartEnd": "2019 - 2021",
+    "companyNameVolunteer": "NOT_PRINT",
+    "companyOccupationVolunteer": "NOT_PRINT",
+    "companyDescriptionVolunteer": "NOT_PRINT",
+    "companyStartEndVolunteer": "NOT_PRINT"
+}
 
 app.get('/pdf', async(request, response) => {
 
@@ -51,13 +63,11 @@ app.get('/pdf', async(request, response) => {
 })
 
 app.get('/', (request, response) => {
-
     const filePath = path.join(__dirname, "print.ejs")
-    ejs.renderFile(filePath, { passengers }, (err, html) => {
+    ejs.renderFile(filePath, { dados }, (err, html) => {
         if(err) {
             return response.send('Erro na leitura do arquivo')
         }
-
         // enviar para o navegador
         return response.send(html)
     })
