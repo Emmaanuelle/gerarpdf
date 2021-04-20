@@ -39,13 +39,13 @@ app.get('/pdf', async(request, response) => {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
 
-    await page.goto('http://localhost:3000/', {
+    await page.goto('http://localhost:3000/curvi3', {
         waitUntil: 'networkidle0'
     })
 
     const pdf = await page.pdf({
         printBackground: true,
-        format: 'Letter',
+        format: 'A4',
         margin:{
             top:"20px",
             bottom:"20px",
@@ -61,41 +61,6 @@ app.get('/pdf', async(request, response) => {
     return response.send(pdf)
 
 })
-
-app.get('/curvi2', (request, response) => {
-    const filePath = path.join(__dirname, "curvi2.ejs")
-    ejs.renderFile(filePath, { dados }, (err, html) => {
-        if(err) {
-            return response.send('Erro na leitura do arquivo')
-        }
-        // enviar para o navegador
-        return response.send(html)
-    })
-
-})
-app.get('/curvi4', (request, response) => {
-    const filePath = path.join(__dirname, "curvi4.ejs")
-    ejs.renderFile(filePath, { dados }, (err, html) => {
-        if(err) {
-            return response.send('Erro na leitura do arquivo')
-        }
-        // enviar para o navegador
-        return response.send(html)
-    })
-
-})
-app.get('/curvi5', (request, response) => {
-    const filePath = path.join(__dirname, "curvi5.ejs")
-    ejs.renderFile(filePath, { dados }, (err, html) => {
-        if(err) {
-            return response.send('Erro na leitura do arquivo')
-        }
-        // enviar para o navegador
-        return response.send(html)
-    })
-
-})
-
 // curvi 1
 app.get('/curvi1', (request, response) => {
     const filePath = path.join(__dirname, "curvi1.ejs")
@@ -108,6 +73,59 @@ app.get('/curvi1', (request, response) => {
     })
 
 })
+
+// curvi 2
+app.get('/curvi2', (request, response) => {
+    const filePath = path.join(__dirname, "curvi2.ejs")
+    ejs.renderFile(filePath, { dados }, (err, html) => {
+        if(err) {
+            return response.send('Erro na leitura do arquivo')
+        }
+        // enviar para o navegador
+        return response.send(html)
+    })
+
+})
+// curvi 3
+app.get('/curvi3', (request, response) => {
+    const filePath = path.join(__dirname, "curvi3.ejs")
+    ejs.renderFile(filePath, { dados }, (err, html) => {
+        if(err) {
+            return response.send('Erro na leitura do arquivo')
+        }
+        // enviar para o navegador
+        return response.send(html)
+    })
+
+})
+
+// curvi 4
+app.get('/curvi4', (request, response) => {
+    const filePath = path.join(__dirname, "curvi4.ejs")
+    ejs.renderFile(filePath, { dados }, (err, html) => {
+        if(err) {
+            return response.send('Erro na leitura do arquivo')
+        }
+        // enviar para o navegador
+        return response.send(html)
+    })
+
+})
+
+// curvi 5
+app.get('/curvi5', (request, response) => {
+    const filePath = path.join(__dirname, "curvi5.ejs")
+    ejs.renderFile(filePath, { dados }, (err, html) => {
+        if(err) {
+            return response.send('Erro na leitura do arquivo')
+        }
+        // enviar para o navegador
+        return response.send(html)
+    })
+
+})
+
+
 
 
 app.listen(3000)
