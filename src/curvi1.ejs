@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curvi 12</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+        <style>
+            .container{
+                background-color:#C7DAED;
+                width:60%;
+                position: absolute;   
+                left: 21.43%;
+                right: 21.45%;
+                top: 0%;
+                bottom: 84.32%;
+            }
+            .nome{
+                border-style:solid; margin:45px;
+            }
+            .cont{
+                margin-left:5rem;
+                margin-top:5rem ;
+            }
+            
+            
+            .row{
+                margin-left:5rem;
+                margin-top:5rem ;
+            }
+           .rodape{
+            background-color:#C7DAED;
+            position: absolute;
+            left:25%;
+            right:25%;
+            top: 105%;
+            bottom: 0%;
+            padding: 30px 45px 45px 30px;           
+           }
+           
+        </style>
+</head>
+<body >
+    <div class="container">
+        <div class="container text-center mt-4">
+            <h1 class="font-weight-light" style="color: #000000;
+            ;">
+                <%= dados.name %>
+            </h1>
+            <span style="color: #000000;" class="h5">
+                <%= dados.age %>
+            </span>
+        </div>
+    </div>
+
+    <div class="nome">
+
+    
+   
+    <div>
+        <div class="cont">
+            <div class="row">
+              <div class="col-6 my-5 " >
+                <h5 style="color:#6E7C8E;">CONTATO</h5>
+                
+                <span>
+                    <%= dados.cellphone %>
+                </span><br />
+                <span>
+                    <%= dados.email %>
+                </span><br />
+                <span>
+                    <%= dados.address %>
+                </span><br />
+                <% if (dados.linkedln_link) { %>
+                    <span>
+                        <%= dados.linkedln_link %>
+                    </span><br />
+                    <% } %>
+                  
+              </div>
+              <div class="col-6 my-5 " >
+                <h5 style="color:#6E7C8E;">OBJETIVO</h5>
+                   
+                    <p class="mr-4">
+                        <%= dados.goal %>
+                    </p>
+              
+        </div>
+            </div>
+            <hr width="50%" style="margin-left:1; height:0.2rem;" color="black">
+            <div class="row" >
+              <div class="col-6 my-5  ">
+                <h5 style="color:#6E7C8E;">FORMAÇÃO</h5>
+                <span>
+                    <%= dados.scholarity %> - <%= dados.courseName %>
+                </span><br />
+                <span>
+                    <%= dados.courseSchool %>
+                </span><br />
+                <span>
+                    <%= dados.courseEndYear %>
+                </span><br />
+                </div>
+                <div class="col-6 my-5 ">
+                    <h5 style="color:#6E7C8E;">EXPERIÊNCIA</h5>
+                    <span>
+                        <%= dados.companyOccupation %> - <%= dados.companyName %>
+                    </span><br />
+                    <span>
+                        <%= dados.companyStartEnd %>
+                    </span><br />
+                    <span>
+                        <%= dados.companyDescription %>
+                    </span><br />
+                    <% if (dados.companyNameVolunteer !='NOT_PRINT' && dados.companyNameVolunteer) { %>
+                        <span>
+                            <%= dados.companyNameVolunteer %>
+                        </span><br />
+                        <span>
+                            <%= dados.companyOccupationVolunteer %>
+                        </span><br />
+                        <span>
+                            <%= dados.companyDescriptionVolunteer %>
+                        </span><br />
+                        <span>
+                            <%= dados.companyStartEndVolunteer %>
+                        </span><br />
+                        <% } %>
+                    </div>
+              <div class="col-6 my-5 " >
+                <h5 style="color:#6E7C8E;">CURSOS</h5>
+                        <span>
+                            <%= dados.language %> - <%= dados.language_level %>
+                        </span><br />
+
+                        
+                        
+              </div>
+             
+            </div>
+          </div>
+          </div>
+        <!-- <div class="rodape">
+              
+        </div> -->
+</body>
+
+</html>
